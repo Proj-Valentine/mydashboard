@@ -29,9 +29,18 @@ const App = () => {
             ):(
             <div className ="w-0 dark:bg-secondary-dark-bg">Sidebar w-0</div>)
             }
-            <div className= {activeMenu ? 'dark:bg-main-bg bg-main-bg min-h-screen md:ml-72 w-full':'dark:bg-main-bg bg-main-bg min-h-screen  w-full flex-2' }>
-
+            {/* for divs that share the same/similar class create a template litral to render different values on conditions
+            I am creating a coditional logic to apply different classes to the div based on the value of activeMenu */}
+            <div className= 
+            { `dark:bg-main-bg bg-main-bg min-h-screen w-full ${activeMenu ? 'md:ml-72':'flex-2'}` 
+            }>
+                <div className="fixed md:static
+                 bg-main-bg dark:bg-main-dark-bg
+                navbar w-full">
+                     NAVBAR COMPONENTS
+                     </div>
             </div>
+            
         </div>
         </BrowserRouter>
     </div>
