@@ -1,11 +1,11 @@
 import React from 'react'
 
-const Pie = () => {
+const Area = () => {
   return (
     <div>
-      Pie
+      Area
     </div>
   )
 }
 
-export default Pie
+export default Area

@@ -1,11 +1,11 @@
 import React from 'react'
 
-const Pie = () => {
+const Pyramid = () => {
   return (
     <div>
-      Pie
+      Pyramid
     </div>
   )
 }
 
-export default Pie
+export default Pyramid

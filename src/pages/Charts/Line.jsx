@@ -1,11 +1,11 @@
 import React from 'react'
 
-const Pie = () => {
+const Line = () => {
   return (
     <div>
-      Pie
+      Line
     </div>
   )
 }
 
-export default Pie
+export default Line

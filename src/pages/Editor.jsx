@@ -1,11 +1,11 @@
 import React from 'react'
 
-const Pie = () => {
+const Editor = () => {
   return (
     <div>
-      Pie
+      Editor
     </div>
   )
 }
 
-export default Pie
+export default Editor

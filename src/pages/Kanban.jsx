@@ -1,11 +1,11 @@
 import React from 'react'
 
-const Pie = () => {
+const Kanban = () => {
   return (
     <div>
-      Pie
+     KANBAN 
     </div>
   )
 }
 
-export default Pie
+export default Kanban

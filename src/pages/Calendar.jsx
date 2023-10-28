@@ -1,11 +1,11 @@
 import React from 'react'
 
-const Pie = () => {
+const Calendar = () => {
   return (
     <div>
-      Pie
+      Calendar
     </div>
   )
 }
 
-export default Pie
+export default Calendar
