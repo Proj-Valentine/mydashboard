@@ -27,7 +27,8 @@ export const ContextProvider = ({children}) => {
 
         <StateContext.Provider
         // the state context provider passes the value of the state to its children (ie various component or wherever its used)
-        value={{activeMenu}}>
+        //adding setActiveMenu to context values to dyamically update it
+        value={{activeMenu, setActiveMenu}}>
 
             {children}
         </StateContext.Provider>)
