@@ -522,7 +522,7 @@ export const links = [
     title: 'Charts',
     links: [
       {
-        name: ' line',
+        name: 'line',
         icon: <AiOutlineStock />,
       },
       {
