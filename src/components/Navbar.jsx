@@ -27,7 +27,26 @@ const NavButton = ({title,customFunc,icon,color,dotColor}) => (
 
 const Navbar = () => {
 //retrieving the state objects from the statecontext
-  const {activeMenu, setActiveMenu, isClicked,setIsClicked,handleClick} = useStateContext();
+  const {activeMenu, setActiveMenu, isClicked, setIsClicked, handleClick, screenSize, setScreenSize} = useStateContext();
+
+  // useEffect hook takes two parameters, a function and dependency array
+  // useEffect(()=>{},[]) is used to apply an effect when a state event occurs et click,cancel etc like a side effect of a state
+  useEffect(()=>{
+    const handleResize = () => setScreenSize (window.innerWidth);
+        //this is listening for a resize when window is opened and then call the handleResize function
+    window.addEventListener('resize',handleResize);
+    // intial call of handle resize to determine initial width of window
+    handleResize();
+    //in react whenever we call an event lister we have to remove it, so we return a recall function to remove eventlistener
+    return () => window.removeEventListener ('resize',handleResize);
+  },[])
+
+  // creating anotheruseeffect to setActivemenu state whenever a state changes (ie screensize)
+  // to hide menu depending on screen size eg mobile phoes
+  useEffect((()=>{
+    if(screenSize<=900){setActiveMenu(false)}
+    else{setActiveMenu(true)}
+  }),[screenSize])
 
   return (
     <div className= "flex justify-between p-2 md:mx-6 relative">

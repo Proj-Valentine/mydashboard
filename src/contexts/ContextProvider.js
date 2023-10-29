@@ -27,6 +27,8 @@ export const ContextProvider = ({children}) => {
     //setting initial state value for isClicked to intitialState defined in the initial state object above
     const [isClicked,setIsClicked] = useState((initialState))
     
+    // setting a state for SCREENSIZE
+    const [screenSize,setScreenSize] = useState(undefined);
 
     //defining a function to update the value of initiatstate when clicked parameter is passed to it
     // after defining we pass it to the stateContext to be used by the children
@@ -35,7 +37,7 @@ export const ContextProvider = ({children}) => {
         //  setIsClicked (clicked);
         // so we spread intial state object and chage a value when isclicked is passed ie isclicked is set to true and passed to the item
         setIsClicked ({ ...initialState, [clicked]: true});
-    }
+    };
 
     
 
@@ -47,7 +49,8 @@ export const ContextProvider = ({children}) => {
         // added handleclick to statecontext
         value={{activeMenu, setActiveMenu,
                 isClicked,setIsClicked,
-                handleClick}}
+                handleClick,
+                screenSize,setScreenSize}}
                 >
 
             {children}
