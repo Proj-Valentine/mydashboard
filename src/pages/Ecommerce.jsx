@@ -54,7 +54,7 @@ const Ecommerce = () => {
         </div>
       </div> 
      <div className="flex gap-10 flex-wrap justify-center">
-      <div classname="bg-white dark:text-gray-200 dark:bg-secondary-dark-bg m-3 p-4 rounded-2xl md:w-780">
+      <div className="bg-white dark:text-gray-200 dark:bg-secondary-dark-bg m-3 p-4 rounded-2xl md:w-780">
         <div className="flex justify-between">
           <p className="font-semibold text-xl">Revenue Updates</p>
           <div className="flex items-center gap-4">
@@ -73,9 +73,33 @@ const Ecommerce = () => {
             <div>
               <p>
                 <span className="text-3xl font-semibold">$98,000</span>
-                <span className="p-1.5 hover:drop-shadow-xl cursor-pointer rounded-full text-white bg-green-400 ">23%</span>
+                <span className="p-1.5 hover:drop-shadow-xl cursor-pointer rounded-full text-white 
+                    bg-green-400 ">23%</span>
               </p>
+              <p className="text-gray-500 mt-1"> Budget</p>
             </div>
+            <div className="mt-8">
+              <p>
+                <span className="text-3xl font-semibold">$48,000</span>
+                
+              </p>
+              <p className="text-gray-500 mt-1"> Expense</p>
+            </div>
+            <div className="mt-5">
+              <SparkLine
+              currentColor="blue"
+              id="line-sparkline"
+              type="Line"
+              height="80px"
+              width="250px"
+              data={SparklineAreaData}
+              color="blue"/>
+
+            </div>
+            <div className="mt-10">
+
+            </div>
+            
 
           </div>
 
