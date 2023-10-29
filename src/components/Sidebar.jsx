@@ -42,9 +42,7 @@ const Sidebar = () => {
           <button type="button" onClick={()=>setActiveMenu((prevActiveMenu)=>!prevActiveMenu)}
           className = "text-xl rounded-full p-3 hover:bg-light-gray mt-4 block md:hidden" >
             <MdOutlineCancel/>
-
           </button>
-
         </TooltipComponent>
 
       </div>
@@ -60,7 +58,7 @@ const Sidebar = () => {
               <NavLink
               to={`/${link.name}`}
               key={link.name}
-              // handleclick hides menu on SMALL devices
+              // handleclick hides menu on SMALL devices when a link to a page is clicked
               onClick={handleCloseSideBar}
               className={({ isActive })=>(isActive? activeLink:normalLink)}>
                 {link.icon}
