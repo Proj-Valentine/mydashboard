@@ -26,8 +26,8 @@ const NavButton = ({title,customFunc,icon,color,dotColor}) => (
 
 
 const Navbar = () => {
-
-  const {activeMenu, setActiveMenu } = useStateContext();
+//retrieving the state objects from the statecontext
+  const {activeMenu, setActiveMenu, isClicked,setIsClicked,handleClick} = useStateContext();
 
   return (
     <div className= "flex justify-between p-2 md:mx-6 relative">
@@ -39,24 +39,24 @@ const Navbar = () => {
         icon={<AiOutlineMenu/>}/>
       <div className="flex">
         <NavButton title="Cart" 
-          customFunc={()  => ('cart')}
+          customFunc={()  => handleClick('cart')}
           color="blue" 
           icon={<FiShoppingCart/>}/>
         <NavButton title="Chat" 
           dotColor="#03C9D7"
-          customFunc={()  => ('chat')}
+          customFunc={()  => handleClick('chat')}
           color="blue" 
           icon={<BsChatLeft/>}/>
         <NavButton title="Notifications"
           dotColor="#03C9D7"         
-          customFunc={()  => ('notifications')}
+          customFunc={()  => handleClick('notifications')}
           color="blue" 
           icon={<RiNotification3Line/>}/>
        <TooltipComponent
         content="Profile"
         position="BottomCenter">
           <div className= " flex items center gap-2 cursor-pointer p-1 hover:bg-light-gray rounded-lg"
-          onClick={()=>('userProfile')}>
+          onClick={()=> handleClick('userProfile')}>
             <img className= "rounded-full w-8 h-8"
             src={avatar}/>
             <p>
@@ -68,6 +68,12 @@ const Navbar = () => {
           </div>
 
        </TooltipComponent>
+       {/* if isClicked.cart then isClicked && means (if isClicked? then:else) render the <Chat/> component */}
+       {/* note that isClicked is a state object getting it value set by the setisclicked from the useStatecontext */}
+       {isClicked.cart && <Cart/>}
+       {isClicked.chat && <Chat/>}
+       {isClicked.notifications && <Notifications/>}
+       {isClicked.userProfile && <UserProfile/>}
           
         
       </div>

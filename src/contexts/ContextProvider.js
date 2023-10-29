@@ -23,12 +23,32 @@ export const ContextProvider = ({children}) => {
     //setting initial state for active menu to true
     const [activeMenu, setActiveMenu] = useState(true);
 
+    //creating new usestate to pass to Navbar icons
+    //setting initial state value for isClicked to intitialState defined in the initial state object above
+    const [isClicked,setIsClicked] = useState((initialState))
+    
+
+    //defining a function to update the value of initiatstate when clicked parameter is passed to it
+    // after defining we pass it to the stateContext to be used by the children
+    const handleClick = (clicked) => {
+        // this below would have worked to set the value, if the intitial value set was a string but its an object ie initialState so we cant replace it with a string clicked
+        //  setIsClicked (clicked);
+        // so we spread intial state object and chage a value when isclicked is passed ie isclicked is set to true and passed to the item
+        setIsClicked ({ ...initialState, [clicked]: true});
+    }
+
+    
+
     return(
 
         <StateContext.Provider
         // the state context provider passes the value of the state to its children (ie various component or wherever its used)
         //adding setActiveMenu to context values to dyamically update it
-        value={{activeMenu, setActiveMenu}}>
+        // added handleclick to statecontext
+        value={{activeMenu, setActiveMenu,
+                isClicked,setIsClicked,
+                handleClick}}
+                >
 
             {children}
         </StateContext.Provider>)
