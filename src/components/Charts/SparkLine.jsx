@@ -18,6 +18,7 @@ const SparkLine = ({id,height,width,color,data,type,currentColor}) => {
       dataSource={data}
       xName="x"
       yName="yval" 
+      type={type}
       // tooltipSettings adds tooltip effect to the line and its possible bacuse I am injecting SparkLinetooltip services
       tooltipSettings={{visible: true,
       format: '${x} : data ${yval}',
