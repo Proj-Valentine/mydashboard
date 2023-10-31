@@ -13,7 +13,11 @@ const Calendar = () => {
       title="Calendar"/>
       <ScheduleComponent
       //add height to decrease page length
-      height="650px">
+      height="650px"
+      //to add events toagenda the calendar use  a data source
+      eventSettings={{ dataSource:scheduleData}}
+      // use this to set the starting dates, eg, in 2023 if i run this by dafault my sample data has no 2023 so it will return empty
+      selectedDate={new Date (2021,0,10)}>
         <Inject services={[Day, Week,WorkWeek,Month,Agenda, Resize, DragAndDrop]}
         />
       </ScheduleComponent>
