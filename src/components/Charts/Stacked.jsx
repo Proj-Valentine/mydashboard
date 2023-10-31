@@ -11,11 +11,12 @@ const Stacked = ({width,height}) => {
       <ChartComponent
       width={width}
       height={height}
-      id="stack chart"
+      id="charts"
       //these are the data points
       primaryXAxis={stackedPrimaryXAxis}
       primaryYAxis={stackedPrimaryYAxis}
       chartArea={{ border:{width:0}}}
+      tooltip={{enable:true}}
       legendSettings={{background: 'white'}}
       >
         <Inject services={[Legend,Category,StackingColumnSeries,Tooltip]}/>

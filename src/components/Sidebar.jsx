@@ -35,7 +35,7 @@ const Sidebar = () => {
         {/* setting active menu to false when sishopwareicon is clicked */}
         <Link to ="/" onClick = {handleCloseSideBar} 
         className = "items-center gap-3 ml-3 mt-4 flex text-xl font-extrabold tracking-tight dark:text-white text-slate-900"> 
-        <SiShopware/><span>shoppy</span>
+        <SiShopware/><span>Mr Valentine</span>
         </Link>
         <TooltipComponent content="Menu" position="ButtomCenter">
           {/* onclick of button change menu to previous value  to toggle it on or off*/}
