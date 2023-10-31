@@ -16,7 +16,10 @@ const Customers = () => {
           allowPaging
           allowSorting
           // enable this to bring the search box on the grid to search for elements// by importing Toolbar and injecting it
+          // YOU Can add other settings to perform CRUD operations , [Add, Edit,Delete]
           toolbar={['Delete']}
+          // edit settings allows deleting and editing // also inject selection,edit etc services
+          editSettings={{ allowDeleting:true,allowEditing:true}}
           width="auto">
             <ColumnsDirective>
             {customersGrid.map((item,index)=>(
@@ -25,7 +28,7 @@ const Customers = () => {
               <ColumnDirective key={index} {...item}/>
             ))}
             </ColumnsDirective>
-            <Inject services= {[Page,Toolbar ]}/>
+            <Inject services= {[Page,Toolbar,Selection, Edit,Sort,Filter ]}/>
           </GridComponent>
         </div>
       )
