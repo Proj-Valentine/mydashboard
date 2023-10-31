@@ -14,7 +14,7 @@ const Editor = () => {
             </RichTextEditorComponent>
 
    
-      </div>
+          </div>
   )
 }
 
