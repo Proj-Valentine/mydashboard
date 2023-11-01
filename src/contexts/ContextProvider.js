@@ -25,10 +25,28 @@ export const ContextProvider = ({children}) => {
 
     //creating new usestate to pass to Navbar icons
     //setting initial state value for isClicked to intitialState defined in the initial state object above
-    const [isClicked,setIsClicked] = useState((initialState))
+    const [isClicked,setIsClicked] = useState((initialState));
     
     // setting a state for SCREENSIZE
     const [screenSize,setScreenSize] = useState(undefined);
+
+    // adding context state variables to use for theming: light and darkmode and colors
+
+    const [currentColor, setCurrentColor] = useState ('#03C9D7');
+    const [currentMode, setCurrentMode] = useState ('light');
+    const [themeSettings,setThemeSettings ] = useState(false);
+
+    const setMode = (e) => {
+        setCurrentMode(e.target.value);
+        // updating local storage with chosen color
+        localStorage.setItem('themeMode', e.target.value)
+    }
+
+    const setColor = (e) => {
+        setCurrentColor(e.target.value);
+        // updating local storage with chosen color
+        localStorage.setItem('colorMode', e.target.value)
+    }    
 
     //defining a function to update the value of initiatstate when clicked parameter is passed to it
     // after defining we pass it to the stateContext to be used by the children
@@ -47,10 +65,13 @@ export const ContextProvider = ({children}) => {
         // the state context provider passes the value of the state to its children (ie various component or wherever its used)
         //adding setActiveMenu to context values to dyamically update it
         // added handleclick to statecontext
-        value={{activeMenu, setActiveMenu,
+        value={{activeMenu,setActiveMenu,
                 isClicked,setIsClicked,
                 handleClick,
-                screenSize,setScreenSize}}
+                screenSize,setScreenSize,
+                currentColor, currentMode,
+                setCurrentColor,setCurrentMode,
+                themeSettings,setThemeSettings}}
                 >
 
             {children}

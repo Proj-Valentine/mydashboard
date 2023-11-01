@@ -15,7 +15,7 @@ import './App.css';
 const App = () => {
     // Replacing this hardcoded value with a dynamic context  state value and calling it as a hook
     // const activeMenu = true;
-    const activeMenu = useStateContext();
+    const {activeMenu,ThemeSettings} = useStateContext();
   return (
     <div>
         <BrowserRouter>
