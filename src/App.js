@@ -15,7 +15,7 @@ import './App.css';
 const App = () => {
     // Replacing this hardcoded value with a dynamic context  state value and calling it as a hook
     // const activeMenu = true;
-    const {activeMenu,ThemeSettings} = useStateContext();
+    const {activeMenu,themeSettings} = useStateContext();
   return (
     <div>
         <BrowserRouter>
@@ -49,7 +49,8 @@ const App = () => {
                      </div>
            
                 <div >
-                <ThemeSettings />
+                    {/* adding a dynamic code block to render if themesettings state changes, in this case if its true, default is false */}
+               { themeSettings && <ThemeSettings />}
                     {/* Routes allows us to rout the page to the element prop value which can be another page */}
                 <Routes>   
                     {/* dashboard pages */}
