@@ -15,7 +15,7 @@ import { useStateContext } from '../contexts/ContextProvider'
 
 const Sidebar = () => {
   // const activeMenu =true;
-  const {activeMenu, setActiveMenu,screenSize } = useStateContext();
+  const {activeMenu, setActiveMenu,screenSize,currentColor } = useStateContext();
   
   //creat a function to close menu menu is active and person changes the screensize
   // this function will replace the old expression for onClick for the  (onClick = {()=> setActiveMenu(false)} )
@@ -60,6 +60,7 @@ const Sidebar = () => {
               key={link.name}
               // handleclick hides menu on SMALL devices when a link to a page is clicked
               onClick={handleCloseSideBar}
+              style={({isActive}) => ({backgroundColor: isActive ? currentColor:""})}
               className={({ isActive })=>(isActive? activeLink:normalLink)}>
                 {link.icon}
                 <span className="capitalize">
