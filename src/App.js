@@ -49,6 +49,7 @@ const App = () => {
                      </div>
            
                 <div >
+                <ThemeSettings />
                     {/* Routes allows us to rout the page to the element prop value which can be another page */}
                 <Routes>   
                     {/* dashboard pages */}
