@@ -15,7 +15,7 @@ import './App.css';
 const App = () => {
     // Replacing this hardcoded value with a dynamic context  state value and calling it as a hook
     // const activeMenu = true;
-    const {activeMenu,themeSettings} = useStateContext();
+    const {activeMenu,themeSettings,setThemeSettings} = useStateContext();
   return (
     <div>
         <BrowserRouter>
@@ -26,7 +26,9 @@ const App = () => {
                     className="text-3xl p-3 
                     hover:drop-shadow-xl
                     hover:bg-light-gray text-white"
-                    style ={{background: 'blue',borderRadius:'50%'}}>
+                    style ={{background: 'blue',borderRadius:'50%'}}
+                    // Adding functionality to settings to bring back the theme settings sidebar to set our themes after we close it
+                    onClick={()=> setThemeSettings(true)}>
                         <FiSettings/>
                     </botton>
                 </TooltipComponent>
