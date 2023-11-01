@@ -36,17 +36,26 @@ export const ContextProvider = ({children}) => {
     const [currentMode, setCurrentMode] = useState ('light');
     const [themeSettings,setThemeSettings ] = useState(false);
 
+
+    // this will still destructure event and pass its value to the setMode function, 
+    // in themesettings file its being called without any parameter {setMode}}
     const setMode = (e) => {
         setCurrentMode(e.target.value);
         // updating local storage with chosen color
         localStorage.setItem('themeMode', e.target.value)
-    }
 
-    const setColor = (e) => {
-        setCurrentColor(e.target.value);
+        setThemeSettings(false);
+    };
+
+        // this was throwing an error becoase e.target.value returned undefined after debugging, the param value is being directly sent from setColor( item.value) in themesettings file
+    // but it was initially defined to listen to an event and destructure for the value
+    const setColor = (color) => {
+        setCurrentColor(color);
         // updating local storage with chosen color
-        localStorage.setItem('colorMode', e.target.value)
-    }    
+        localStorage.setItem('colorMode', color);
+
+        setThemeSettings(false);
+    }  ;  
 
     //defining a function to update the value of initiatstate when clicked parameter is passed to it
     // after defining we pass it to the stateContext to be used by the children
@@ -71,7 +80,8 @@ export const ContextProvider = ({children}) => {
                 screenSize,setScreenSize,
                 currentColor, currentMode,
                 setCurrentColor,setCurrentMode,
-                themeSettings,setThemeSettings}}
+                themeSettings,setThemeSettings,
+                setMode,setColor}}
                 >
 
             {children}
