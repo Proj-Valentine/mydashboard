@@ -27,7 +27,7 @@ const NavButton = ({title,customFunc,icon,color,dotColor}) => (
 
 const Navbar = () => {
 //retrieving the state objects from the statecontext
-  const {activeMenu, setActiveMenu, isClicked, setIsClicked, handleClick, screenSize, setScreenSize} = useStateContext();
+  const {activeMenu, setActiveMenu, isClicked, setIsClicked, handleClick, screenSize, setScreenSize, currentColor} = useStateContext();
 
   // useEffect hook takes two parameters, a function and dependency array
   // useEffect(()=>{},[]) is used to apply an effect when a state event occurs et click,cancel etc like a side effect of a state
@@ -54,22 +54,22 @@ const Navbar = () => {
     {/* calling navButton created above */}
       <NavButton title="Menu" 
         customFunc={()=> setActiveMenu((prevActiveMenu)=>!prevActiveMenu)}
-        color="blue" 
+        color={currentColor} 
         icon={<AiOutlineMenu/>}/>
       <div className="flex">
         <NavButton title="Cart" 
           customFunc={()  => handleClick('cart')}
-          color="blue" 
+          color={currentColor} 
           icon={<FiShoppingCart/>}/>
         <NavButton title="Chat" 
           dotColor="#03C9D7"
           customFunc={()  => handleClick('chat')}
-          color="blue" 
+          color={currentColor} 
           icon={<BsChatLeft/>}/>
         <NavButton title="Notifications"
           dotColor="#03C9D7"         
           customFunc={()  => handleClick('notifications')}
-          color="blue" 
+          color={currentColor} 
           icon={<RiNotification3Line/>}/>
        <TooltipComponent
         content="Profile"
