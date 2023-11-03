@@ -30,7 +30,7 @@ const App = () => {
     <div className={currentMode === 'Dark' ? 'dark':''}>
         <BrowserRouter>
         <div className="flex relative dark:bg-main-dark-bg">
-            <div className="fixed right-4 bottom-4" style = {{zIndex:'1000'}}>
+            <div className="fixed right-4 bottom-10" style = {{zIndex:'1000'}}>
                 <TooltipComponent content= "Settings" position="Top">
                     <botton type="button" 
                     className="text-3xl p-3 
