@@ -3,9 +3,13 @@ import { GridComponent, ColumnsDirective,ColumnDirective,Page,Search,Inject,Tool
 import { employeesData, employeesGrid } from '../data/dummy';
 import { Header } from '../components';
 
+import { useStateContext } from '../contexts/ContextProvider';
+
 const Employees = () => {
+    const { currentMode } = useStateContext();
+
   return (
-    <div className="m-2 md:m-10 p-2 md:p-10 bg-white rounded-3xl">
+    <div className="m-2 md:m-10 p-2 md:p-10 bg-white rounded-3xl" style={{backgroundColor:currentMode === 'Dark' ? '#33373E' : '#fff'}}>
       <Header category ="Page" title="Employees"/>
       {/* creating the grid component to display fields and headers and data */}
       <GridComponent 

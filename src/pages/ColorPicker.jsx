@@ -2,15 +2,22 @@ import React from 'react';
 import { ColorPickerComponent} from "@syncfusion/ej2-react-inputs";
 import { Header } from '../components';
 
+import { useStateContext } from '../contexts/ContextProvider';
+
+
 
 const ColorPicker = () => {
+  const { currentMode } = useStateContext();
+
+
+
   //creating a variable to hold the current selected color to pass it to the change prop of ColorPicker component
   const change= (args)=>{
     document.getElementById('preview').style.backgroundColor = args.currentValue.hex;
   }
 
   return (
-          <div className="m-2 md:m-10 mt-24 p-2 md:p-10 bg-white rounded-3xl">
+          <div className="m-2 md:m-10 mt-24 p-2 md:p-10 bg-white rounded-3xl" style={{backgroundColor:currentMode === 'Dark' ? '#33373E' : '#fff'}}>
             <Header category="App" title="Color Picker"/>
             <div className="text-center">
               <div id="preview"/>
