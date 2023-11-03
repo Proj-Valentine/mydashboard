@@ -24,7 +24,6 @@ const ThemeSet = () => {
           className="text-2xl p-3 hover:drop-shadow-xl hover:bg-light-gray"
           >
             <MdOutlineCancel />
-
           </button>
         </div>
         <div className="flex-col border-t-1 border-color p-4 ml-4">
