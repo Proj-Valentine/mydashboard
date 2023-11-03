@@ -11,7 +11,7 @@ const Footer = () => (
     
 
     <div className=" flex justify-between" style={{ width:"100%",textAlign:"center"}}>
-        <div className="flex-button place-items-start"><p>Contact info:</p><br/><p style={{textDecoration:"none"}}> &nbsp; vkampah28@gmail.com </p></div>
+        <div className="flex-button place-items-start"><p>Contact Info:</p><br/><p style={{textDecoration:"none"}}> &nbsp; vkampah28@gmail.com </p></div>
         <div className="flex flex-button place-items-end"><a href="#top" style={{textDecoration:"none"}}>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Top</a></div>
         <div className="place-items-end"><p> Profile & Project</p>
         <SocialIcon  label="my video channel" network= "linkedin" url="https://www.linkedin.com/in/valentine-ampah-b92a0198" target="_blank" style={{ height: 25, width: 25 }}/>
