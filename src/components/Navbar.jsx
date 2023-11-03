@@ -89,6 +89,9 @@ const Navbar = () => {
        </TooltipComponent>
        {/* if isClicked.cart then isClicked && means (if isClicked? then:else) render the <Chat/> component */}
        {/* note that isClicked is a state object getting it value set by the setisclicked from the useStatecontext */}
+       {/* the initial state of cart, chat , notif and user prof are set to fales,;; so isClicked.cart  */}
+       {/* isClicked get its value set by the handleClick function in the contextProvider, this function works by seting the value of setClick function to true when the icon is clicked, and this true value is passed to the intialState object to update the value of the element */}
+       {/* isClicked is an object which intial value is the initialState object eg initialState = {cart:false,chat:false} ie initailState.cart = false so when => isClicked.cart=false and become true when the cart icon is clicked which invokes the handleClick function to setIsclicked value to update isClicked */}
        {isClicked.cart && <Cart/>}
        {isClicked.chat && <Chat/>}
        {isClicked.notifications && <Notifications/>}
