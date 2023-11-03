@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import { FiSettings } from 'react-icons/fi';
 import { TooltipComponent } from '@syncfusion/ej2-react-popups';
@@ -15,7 +15,17 @@ import './App.css';
 const App = () => {
     // Replacing this hardcoded value with a dynamic context  state value and calling it as a hook
     // const activeMenu = true;
-    const {activeMenu,themeSettings,setThemeSettings,currentColor,currentMode} = useStateContext();
+    const {activeMenu,themeSettings,setThemeSettings,currentColor,currentMode,setCurrentColor,setCurrentMode} = useStateContext();
+
+    useEffect(() => {
+        const currentThemeColor = localStorage.getItem('colorMode');
+        const currentThemeMode = localStorage.getItem('themeMode');
+        if (currentThemeColor && currentThemeMode) {
+        setCurrentColor(currentThemeColor);
+        setCurrentMode(currentThemeMode);
+        }
+    }, []);
+
   return (
     <div className={currentMode === 'Dark' ? 'dark':''}>
         <BrowserRouter>
@@ -78,17 +88,10 @@ const App = () => {
                     <Route path="/financial" element={<Financial/>} />
                     <Route path="/color-mapping" element={<ColorMapping/>} /> 
                     <Route path="/pyramid" element={<Pyramid/>} />
-                    <Route path="/stacked" element={<Stacked/>} />
-
-
-
-                
-                    
-
-                    
+                    <Route path="/stacked" element={<Stacked/>} />                    
                 </Routes>
-                </div> 
-
+                </div>
+                <Footer/> 
              </div>
         </div>
         </BrowserRouter>
