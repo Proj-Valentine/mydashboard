@@ -20,7 +20,7 @@ const Footer = () => (
                 &nbsp;<span><a href="https://github.com/Proj-Valentine/Python_Projects" target="_blank" rel="noreferrer" style={{textDecoration:"none"}} className="mt-24 dark:text-gray-200 text-gray-700"></a>Python Automation</span></p></div>
           <div className="" ><p className="text-left"><SocialIcon network = "github" url="https://github.com/Proj-Valentine/mydashboard" rel="noreferrer" target="_blank" bgColor="white" fgColor="black" style={{ height: 25, width: 25 }} />
                 &nbsp;<span><a href="https://github.com/Proj-Valentine/mydashboard" target="_blank" rel="noreferrer" style={{textDecoration:"none"}} className="mt-24 dark:text-gray-200 text-gray-700"></a>React Reporting App</span></p></div>
-          <div className="" ><p className="text-left"> <span><SocialIcon url="https://mail.google.com" style={{ height: 25, width: 25 }}/>&nbsp; vkampah28@gmail.com </span></p> </div>
+          <div className="" ><p className="text-left"> <span style={{textDecoration:"none"}}><SocialIcon url="https://mail.google.com" style={{ height: 25, width: 25 }}/>&nbsp; vkampah28@gmail.com </span></p> </div>
           <div className="" > <br></br> <a href="#top" style={{textDecoration:"none", color:"white"}}>Back to Top</a> </div>
 
         </div>
