@@ -3,28 +3,32 @@ import { SocialIcon } from 'react-social-icons';
 
 
 const Footer = () => (
-  <div className="mt-24 dark:text-gray-200 text-gray-700 md:font-normal md:overflow-auto sm:font-normal">
-    <p className="dark:text-gray-200 text-gray-700 text-center m-20">
-      © 2023 All rights reserved by Valentine Kwame Ampah
-    </p>
+  <div className="mt-24f flex flex-col  dark:text-gray-200 text-gray-700 md:font-normal md:overflow-auto sm:font-normal">
+    <p className="dark:text-gray-200 text-gray-700 justify-center text-center m-20">
+      © 2023 All rights reserved by Valentine Kwame Ampah</p>
+    
 
     
 
-    <div className=" flex justify-between" style={{ width:"100%",textAlign:"center"}}>
-        <div className="flex-button place-items-start"><p>Contact Info:</p><br/><p style={{textDecoration:"none"}}> &nbsp; vkampah28@gmail.com </p></div>
+    <div className=" flex flex-row justify-center text-left m-2" style={{ width:"100%",textAlign:"center"}}>
+      <div></div>
+      <div className="flex flex-col">
+          <div><p className="text-left" > Profile & Projects</p><br/></div>
+          {/* <div className="flex flex-wrap lg:flex-nowrap flex-button md:font-normal sm:font-normal"> */}
+          <div><p className="text-left"><SocialIcon  label="LindedIn" network= "linkedin" url="https://www.linkedin.com/in/valentine-ampah-b92a0198" target="_blank" style={{ height: 25, width: 25 }}/>
+            &nbsp;<span><a href="https://www.linkedin.com/in/valentine-ampah-b92a0198" target="_blank"  rel="noreferrer" style={{textDecoration:"none"}} className="mt-24 dark:text-gray-200 text-gray-700"></a>LinkedIn</span></p></div>
+          <div className=""  ><p className="text-left"><SocialIcon network = "github" url="https://github.com/Proj-Valentine/Python_Projects" rel="noreferrer" target="_blank" bgColor="white" fgColor="black" style={{ height: 25, width: 25 }} />
+                &nbsp;<span><a href="https://github.com/Proj-Valentine/Python_Projects" target="_blank" rel="noreferrer" style={{textDecoration:"none"}} className="mt-24 dark:text-gray-200 text-gray-700"></a>Python Automation</span></p></div>
+          <div className="" ><p className="text-left"><SocialIcon network = "github" url="https://github.com/Proj-Valentine/mydashboard" rel="noreferrer" target="_blank" bgColor="white" fgColor="black" style={{ height: 25, width: 25 }} />
+                &nbsp;<span><a href="https://github.com/Proj-Valentine/mydashboard" target="_blank" rel="noreferrer" style={{textDecoration:"none"}} className="mt-24 dark:text-gray-200 text-gray-700"></a>React Reporting App</span></p></div>
+          {/* </div> */}
+          <div className="" ><p className="text-left"> <span><SocialIcon url="https://mail.google.com" style={{ height: 25, width: 25 }}/>&nbsp; vkampah28@gmail.com </span></p> </div>
+          <div className="" > <br></br> <a href="#top" style={{textDecoration:"none", color:"white"}}>Back to Top</a> </div>
+
         {/* <div className="flex flex-button place-items-center"><a href="#top" style={{textDecoration:"none"}}>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Back to Top</a></div> */}
-        <div className="flex flex-col justify-between">
-          <p> Profile & Projects</p>
-          <div className="flex flex-button md:font-normal sm:font-normal">
-          <SocialIcon  label="my video channel" network= "linkedin" url="https://www.linkedin.com/in/valentine-ampah-b92a0198" target="_blank" style={{ height: 25, width: 25 }}/>
-          &nbsp;<span><a href="https://www.linkedin.com/in/valentine-ampah-b92a0198" target="_blank"  rel="noreferrer" style={{textDecoration:"none"}} className="mt-24 dark:text-gray-200 text-gray-700">LinkedIn</a></span>
-              &nbsp;&nbsp;<SocialIcon network = "github" url="https://github.com/Proj-Valentine/Python_Projects" rel="noreferrer" target="_blank" bgColor="white" fgColor="black" style={{ height: 25, width: 25 }} />
-              &nbsp;<span><a href="https://github.com/Proj-Valentine/Python_Projects" target="_blank" rel="noreferrer" style={{textDecoration:"none"}} className="mt-24 dark:text-gray-200 text-gray-700">Automation</a></span>
-              &nbsp;&nbsp;<SocialIcon network = "github" url="https://github.com/Proj-Valentine/mydashboard" rel="noreferrer" target="_blank" bgColor="white" fgColor="black" style={{ height: 25, width: 25 }} />
-              &nbsp;<span><a href="https://github.com/Proj-Valentine/mydashboard" target="_blank" rel="noreferrer" style={{textDecoration:"none"}} className="mt-24 dark:text-gray-200 text-gray-700">ReactApp</a></span>
-          </div>
         </div>
-    </div>
+        <div></div>
+      </div>
 
   </div>
 );
