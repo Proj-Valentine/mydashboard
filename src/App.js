@@ -4,7 +4,8 @@ import { FiSettings } from 'react-icons/fi';
 import { TooltipComponent } from '@syncfusion/ej2-react-popups';
 // import components from pages and components
 import { Navbar, Footer, Sidebar, ThemeSettings } from './components'
-import { Ecommerce, Orders, Calendar, Employees, Stacked, Pyramid, Customers, Line, Kanban, Area, Bar, Pie, Financial, ColorPicker, ColorMapping, Editor } from './pages'
+import { Ecommerce, Orders, Calendar, Employees, Stacked, Pyramid, Customers, Line, Kanban, Area, Bar, Pie, Financial, ColorPicker, ColorMapping, Editor } from './pages';
+import { IconContext } from "react-icons";
 
 //importing the useTstaecontext
 import { useStateContext } from './contexts/ContextProvider'
@@ -33,13 +34,15 @@ const App = () => {
             <div className="fixed right-4 bottom-10" style = {{zIndex:'1000'}}>
                 <TooltipComponent content= "Settings" position="Top">
                     <botton type="button" 
-                    className="text-3xl p-3 
+                    className="text-lg p-3 
                     hover:drop-shadow-xl
                     hover:bg-light-gray text-white"
                     style ={{background: currentColor,borderRadius:'50%'}}
                     // Adding functionality to settings to bring back the theme settings sidebar to set our themes after we close it
                     onClick={()=> setThemeSettings(true)}>
-                        <FiSettings/>
+                        <IconContext.Provider value={{ color: currentMode==='Dark' ? '':'black' , className: "global-class-name" }}>
+                            <FiSettings/>
+                        </IconContext.Provider>
                     </botton>
                 </TooltipComponent>
             </div>
