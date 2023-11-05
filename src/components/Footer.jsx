@@ -14,14 +14,14 @@ const Footer = () => (
       <div></div>
       <div className="flex flex-col">
           <div><p className="text-left" > Profile & Projects</p><br/></div>
-          <div><p className="text-left"><SocialIcon  label="LindedIn" network= "linkedin" url="https://www.linkedin.com/in/valentine-ampah-b92a0198" target="_blank" style={{ height: 25, width: 25 }}/>
+          <div><p className="text-left" style={{paddingBottom:"4px"}}><SocialIcon  label="LindedIn" network= "linkedin" url="https://www.linkedin.com/in/valentine-ampah-b92a0198" target="_blank" style={{ height: 25, width: 25 }}/>
             &nbsp;<span><a href="https://www.linkedin.com/in/valentine-ampah-b92a0198" target="_blank"  rel="noreferrer" style={{textDecoration:"none"}} className="mt-24 dark:text-gray-200 text-gray-700"></a>LinkedIn</span></p></div>
-          <div className=""  ><p className="text-left"><SocialIcon network = "github" url="https://github.com/Proj-Valentine/Python_Projects" rel="noreferrer" target="_blank" bgColor="white" fgColor="black" style={{ height: 25, width: 25 }} />
+          <div><p className="text-left"  style={{paddingBottom:"4px"}}><SocialIcon network = "github" url="https://github.com/Proj-Valentine/Python_Projects" rel="noreferrer" target="_blank" bgColor="white" fgColor="black" style={{ height: 25, width: 25 }} />
                 &nbsp;<span><a href="https://github.com/Proj-Valentine/Python_Projects" target="_blank" rel="noreferrer" style={{textDecoration:"none"}} className="mt-24 dark:text-gray-200 text-gray-700"></a>Python Automation</span></p></div>
-          <div className="" ><p className="text-left"><SocialIcon network = "github" url="https://github.com/Proj-Valentine/mydashboard" rel="noreferrer" target="_blank" bgColor="white" fgColor="black" style={{ height: 25, width: 25 }} />
+          <div><p className="text-left" style={{paddingBottom:"4px"}}><SocialIcon network = "github" url="https://github.com/Proj-Valentine/mydashboard" rel="noreferrer" target="_blank" bgColor="white" fgColor="black" style={{ height: 25, width: 25 }} />
                 &nbsp;<span><a href="https://github.com/Proj-Valentine/mydashboard" target="_blank" rel="noreferrer" style={{textDecoration:"none"}} className="mt-24 dark:text-gray-200 text-gray-700"></a>React Reporting App</span></p></div>
-          <div className="" ><p className="text-left"> <span style={{textDecoration:"none"}}><SocialIcon url="https://mail.google.com" style={{ height: 25, width: 25, textDecoration:"none" }}/>&nbsp; vkampah28@gmail.com </span></p> </div>
-          <div className="" > <br></br> <a href="#top" style={{textDecoration:"none", color:"white"}}>Back to Top</a> </div>
+          <div><p className="text-left" style={{paddingBottom:"4px"}}> <span style={{textDecoration:"none"}}><SocialIcon url="https://mail.google.com" style={{ height: 25, width: 25, textDecoration:"none" }}/>&nbsp; vkampah28@gmail.com </span></p> </div>
+          <div > <br></br> <a href="#top" style={{textDecoration:"none", color:"white"}}>Back to Top</a> </div>
 
         </div>
         <div></div>
