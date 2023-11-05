@@ -34,10 +34,10 @@ const App = () => {
             <div className="fixed right-4 bottom-10" style = {{zIndex:'1000'}}>
                 <TooltipComponent content= "Settings" position="Top">
                     <botton type="button" 
-                    className="text-lg p-3 
+                    className="text-sm p-3 
                     hover:drop-shadow-xl
                     hover:bg-light-gray text-white"
-                    style ={{background: currentColor,borderRadius:'50%'}}
+                    style ={{background: currentColor,borderRadius:'100%'}}
                     // Adding functionality to settings to bring back the theme settings sidebar to set our themes after we close it
                     onClick={()=> setThemeSettings(true)}>
                         <IconContext.Provider value={{ color: currentMode==='Dark' ? '':'black' , className: "global-class-name" }}>
